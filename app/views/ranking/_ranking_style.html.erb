@@ -1,0 +1,10 @@
+<% content_for :head do %>
+  <title><%= title %> - monolist</title>
+  <style>
+      .item-box{width: 590px!important;height:280px!important;margin:5px!important;background-color: #FFFFFF!important;counter-increment: rank;}
+      .image{position: absolute!important;top: 5px!important;left: 30px!important;}
+      .detail{position: absolute!important;top: 150px!important;left: 310px!important;font-size: 20px!important;height: 80px!important;margin-right: 10px!important;}
+      .action{position: absolute!important;top: 240px!important;left: 310px!important;display: block!important;}
+      .item-box:before{content: "第" counter(rank) "位";font-weight: bold;font-size: 4em;line-height: 4em;margin-left: 310px;}
+  </style>
+<% end %>

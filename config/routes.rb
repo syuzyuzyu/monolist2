@@ -1,13 +1,11 @@
 Rails.application.routes.draw do
 
-  #get 'ranking_controller/have'
+  get 'ranking/have'
 
-  #get 'ranking_controller/want'
+  get 'ranking/want'
 
   root 'welcome#index'
 
-  get    'ranking/want', to: 'ranking#want'
-  get    'ranking/have', to: 'ranking#have'
   get    'signup', to: 'users#new'
   get    'login' , to: 'sessions#new'
   post   'login' , to: 'sessions#create'
