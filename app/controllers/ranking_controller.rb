@@ -11,6 +11,6 @@ class RankingController < ApplicationController
 
   def ranking(type)
     #Ownership.where(type: 'Want').group(:item_id)
-    @items = Item.joins(:ownerships).where('ownerships.type = ?', type).group(:item_id).order('count(item_id) desc').distinct.limit(10)
+    @items = Item.joins(:ownerships).where('ownerships.type = ?', type).select('Items.*').group(:item_id).order('count(item_id) desc').limit(10)
   end
 end
